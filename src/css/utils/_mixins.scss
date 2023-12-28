@@ -1,0 +1,67 @@
+$breakpoint-up: (
+  "small": 36em,
+  "medium": 48em,
+  "large": 62em,
+  "xlarge": 75em,
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoint-up, $size)) {
+    @content;
+  }
+}
+
+@mixin d-flex($main: flex-start, $cross: stretch) {
+  & {
+    display: flex;
+    @if ($main != flex-start) {
+      justify-content: $main;
+    }
+    @if ($cross != stretch) {
+      align-items: $cross;
+    }
+  }
+}
+
+@mixin main-gradient($dir: right bottom, $first: #ff8660, $second: #9a33ff) {
+  & {
+    background-image: linear-gradient(to $dir, $first, $second);
+  }
+}
+
+@mixin main-animation($dir: top, $speed: 1.5s, $dely: 0s) {
+  & {
+    position: relative;
+    animation: come-#{$dir} $speed $dely forwards;
+    opacity: 0;
+
+    @keyframes come-#{$dir} {
+      0% {
+        opacity: 0;
+        #{$dir}: 50px;
+      }
+      100% {
+        opacity: 1;
+        #{$dir}: 0;
+      }
+    }
+  }
+}
+
+@mixin scale-up($x: 1, $y: 1, $speed: 1s) {
+  & {
+    animation: scale-up-#{$x}-#{$y} $speed forwards;
+    opacity: 0;
+
+    @keyframes scale-up-#{$x}-#{$y} {
+      0% {
+        opacity: 0;
+        transform: scaleX(0) scaleY(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scaleX($x) scaleY($y);
+      }
+    }
+  }
+}

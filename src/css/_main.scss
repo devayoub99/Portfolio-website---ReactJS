@@ -1,0 +1,120 @@
+@use "./utils" as u;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-gray: #717171;
+  --light-gray: #c5c5c5;
+
+  --main-shadow: 0 0 10px #ccc;
+
+  --box-radius: 6px;
+  --short-duration: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include u.breakpoint(small) {
+    width: u.rem(560);
+  }
+
+  @include u.breakpoint(medium) {
+    width: u.rem(760);
+  }
+
+  @include u.breakpoint(large) {
+    width: u.rem(970);
+  }
+
+  @include u.breakpoint(xlarge) {
+    width: u.rem(1170);
+  }
+}
+
+.section {
+  padding: u.rem(40) 0;
+
+  @include u.breakpoint(medium) {
+    padding: u.rem(60) 0;
+  }
+
+  &.light-section {
+    background-color: #fff;
+  }
+
+  &.dark-section {
+    background-color: #222;
+
+    .section-title {
+      color: #fff;
+    }
+  }
+
+  .section-title {
+    width: fit-content;
+    margin: u.rem(60) auto;
+    font-weight: 300;
+    font-size: u.rem(36);
+
+    .bold {
+      font-weight: 900;
+    }
+  }
+}
+
+.button {
+  width: fit-content;
+  font-size: u.rem(16);
+  padding: u.rem(12) u.rem(24);
+  border-radius: var(--box-radius);
+  cursor: pointer;
+  @include u.d-flex(center, center);
+  gap: u.rem(6);
+  text-transform: capitalize;
+  border: u.rem(2) solid #000;
+}
+
+.black-button {
+  border-color: transparent;
+  background-color: #000;
+  color: #fff;
+}
+
+.transparent-button {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+}

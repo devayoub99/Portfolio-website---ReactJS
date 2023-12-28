@@ -1,0 +1,50 @@
+@use "../utils/" as u;
+
+.skills {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: u.rem(30);
+    overflow: hidden;
+  }
+
+  .skill {
+    min-width: u.rem(120);
+    border: u.rem(2) solid #000;
+    padding: u.rem(20);
+    @include u.d-flex(flex-start, center);
+    flex-direction: column;
+    gap: u.rem(15);
+    border-radius: u.rem(6);
+    box-shadow: u.rem(6) u.rem(6) u.rem(6) #e4e4e4;
+
+    @include u.breakpoint(medium) {
+      min-width: u.rem(180);
+      padding: u.rem(30);
+      gap: u.rem(20);
+    }
+
+    &.dark {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  .image {
+    width: u.rem(35);
+
+    @include u.breakpoint(medium) {
+      width: u.rem(50);
+    }
+  }
+
+  .caption {
+    font-weight: 500;
+    font-size: u.rem(12);
+
+    @include u.breakpoint(medium) {
+      font-size: unset;
+    }
+  }
+}

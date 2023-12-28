@@ -1,0 +1,22 @@
+@use "../utils/" as u;
+
+.footer {
+  background-color: #000;
+  padding: u.rem(12) 0;
+
+  .container {
+    @include u.d-flex(space-between, center);
+  }
+
+  .logo {
+    width: u.rem(48);
+  }
+
+  .copyright {
+    color: #fff;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../utils" as u;
+
+.about-me {
+  .container {
+    @include u.d-flex(flex-start, center);
+    flex-direction: column;
+    gap: u.rem(20) u.rem(40);
+
+    @include u.breakpoint(small) {
+      flex-direction: row;
+    }
+  }
+
+  .image {
+    flex: 1;
+    max-width: u.rem(200);
+
+    @include u.breakpoint(small) {
+      max-width: u.rem(300);
+    }
+  }
+
+  .text {
+    flex: 2;
+
+    .section-title {
+      margin: u.rem(20) 0;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+  }
+}
