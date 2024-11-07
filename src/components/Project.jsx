@@ -11,7 +11,7 @@ export default function Project(props) {
   const imageContainer = useRef(null);
   const img = useRef(null);
 
-  console.log(imageContainer?.current?.clientHeight);
+  // console.log(imageContainer?.current?.clientHeight);
 
   function handleMouseHover() {
     img.current.style.transform = `translateY(calc(-100% + ${imageContainer?.current?.clientHeight}px))`;

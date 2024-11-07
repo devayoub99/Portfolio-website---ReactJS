@@ -19,16 +19,14 @@ export default function Hero() {
               Hello I'm <span className="filled">Ayoub Jasim.</span>
             </p>
             <p>
-              <span className="filled">Frontend </span>
+              <span className="filled">Software </span>
               <span className="empty">Developer</span>
             </p>
             <p>
               Based in <span className="filled">Iraq.</span>
             </p>
           </div>
-          <p className="brief">
-            I create high performance websites ❤
-          </p>
+          <p className="brief">I create high performance websites ❤</p>
           <Button href={myResume} className="button black-button">
             download CV <img src={downloadIcon} alt="Download icon" />
           </Button>

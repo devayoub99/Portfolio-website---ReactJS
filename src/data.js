@@ -2,12 +2,12 @@ import html from "./assets/html.png";
 import css from "./assets/css.png";
 import javascript from "./assets/javascript.png";
 import sass from "./assets/sass.png";
-import bootstrap from "./assets/bootstrap.png";
 import taliwindcss from "./assets/tailwindcss.png";
 import git from "./assets/git.png";
 import react from "./assets/react.png";
-import redux from "./assets/redux.png";
-import figma from "./assets/figma.png";
+import node from "./assets/node.png";
+import mongodb from "./assets/mongodb.png";
+import mysql from "./assets/mysql.png";
 
 import newProject from "./assets/new.webp";
 import youtubeProject from "./assets/youtube.webp";
@@ -42,17 +42,8 @@ const skills = [
     img: sass,
   },
   {
-    caption: "Bootstrap",
-    img: bootstrap,
-  },
-  {
     caption: "TailwindCSS",
     img: taliwindcss,
-  },
-
-  {
-    caption: "Git",
-    img: git,
   },
   {
     caption: "React JS",
@@ -60,12 +51,61 @@ const skills = [
     dark: true,
   },
   {
-    caption: "Redux",
-    img: redux,
+    caption: "Git",
+    img: git,
   },
   {
-    caption: "Figma",
-    img: figma,
+    caption: "Node JS",
+    img: node,
+    dark: true,
+  },
+  {
+    caption: "Mongodb",
+    img: mongodb,
+  },
+  {
+    caption: "MySQL",
+    img: mysql,
+  },
+];
+
+const experience = [
+  {
+    id: 1,
+    organization: "Nahrain foundation for relief and development",
+    jobTitle: "Sotware developer (MERN stack app contract)",
+    duration: "Sep 2024 - Nov 2024",
+    achievements: [
+      "Developed a comprehensive web application aimed at showcasing the organization's mission, programs, and latest activities.",
+      "Implemented features allowing the organization to publish articles, including multimedia content such as videos and images.",
+      "Ensured a user-friendly interface and responsive design to enhance accessibility across various devices.",
+    ],
+  },
+  {
+    id: 2,
+    organization: "Lykvyd AB (Sweden company)",
+    jobTitle: "Sotware developer (React JS, Express and MySQL)",
+    duration: "Mar 2024 - Sep 2024",
+    achievements: [
+      "Developed a responsive user interface using React and CSS modules (Scoped styles).",
+      "Integrated features like form validation, and file uploads (in Frontend and Backend)",
+      "Using Mobile-First approach to ensure responsive design across devices.",
+      "Creating Admin panel pages.",
+      "Customized plugins and added support for the Arabic language.",
+    ],
+  },
+  {
+    id: 3,
+    organization: "Nas Aliraq holding",
+    jobTitle: "Frontend developer (React JS)",
+    duration: "Jan 2024 - Mar 2024",
+    achievements: [
+      "Create About Us page.",
+      "Refactored code into reusable components for better maintainability.",
+      "Enhance 6 components.",
+      "Ensured responsiveness across all website pages.",
+      "Collaborated on enhancing pages accessibility and navigation.",
+    ],
   },
 ];
 
@@ -149,4 +189,4 @@ const emailAndPhone = [
   },
 ];
 
-export { navLinks, skills, projects, contactMe, emailAndPhone };
+export { navLinks, skills, experience, projects, contactMe, emailAndPhone };

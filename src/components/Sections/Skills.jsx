@@ -6,7 +6,7 @@ import { skills } from "../../data";
 export default function Skills() {
   return (
     <section className="section light-section skills" id="skills">
-      <SectionTitle light="My" bold="Skills" />
+      <SectionTitle bold="Skills" />
 
       <div className="container">
         {skills.map((skillData) => {

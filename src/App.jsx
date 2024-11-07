@@ -1,5 +1,6 @@
 import Hero from "./components/Sections/Hero";
 import Skills from "./components/Sections/Skills";
+import Experience from "./components/Sections/Experience";
 import Projects from "./components/Sections/Projects";
 import AboutMe from "./components/Sections/AboutMe";
 import ContactMe from "./components/Sections/ContactMe";
@@ -10,7 +11,11 @@ export default function App() {
     <>
       <Hero />
       <Skills />
-      <Projects className="section dark-section projects" id="projects"></Projects>
+      <Experience
+        className="section light-section experience"
+        id="experience"
+      />
+      <Projects className="section dark-section projects" id="projects" />
       <AboutMe />
       <ContactMe />
       <Footer />

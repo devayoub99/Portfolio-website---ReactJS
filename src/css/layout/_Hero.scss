@@ -21,6 +21,10 @@
 
   .logo img {
     width: u.rem(48);
+
+    @include u.breakpoint(medium) {
+      width: u.rem(60);
+    }
   }
 
   nav {
@@ -51,6 +55,9 @@
       opacity: 1;
       pointer-events: unset;
       @include u.d-flex(center, center);
+    }
+
+    @include u.breakpoint(large) {
       gap: u.rem(20);
     }
 
